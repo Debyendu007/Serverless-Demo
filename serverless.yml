@@ -52,18 +52,6 @@ provider:
 #  environment:
 #    variable1: value1
 
-custom:
-  environments:
-    myStage: dev
-    stages:
-      - dev
-      - qa
-      - staging
-      - production
-    region:
-      dev: 'us-east-1'  
-      stage: 'us-east-1'  
-      production: 'us-east-1'  
 # you can add packaging information here
 #package:
 #  patterns:
