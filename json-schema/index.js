@@ -1,3 +1,5 @@
+const Joi = require('joi');
+
 const CREATE_USER = Joi.object({
     name: Joi.string()
         .alphanum()
@@ -18,4 +20,4 @@ const CREATE_USER = Joi.object({
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
 });
 
-export {CREATE_USER};
+module.export = CREATE_USER;

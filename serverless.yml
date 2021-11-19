@@ -26,7 +26,7 @@ provider:
   lambdaHashingVersion: 20201221
   region: us-east-1
   stage: dev
-  profile: serverless_admin
+  profile: serverless
 
 # you can overwrite defaults here
 #  stage: dev
@@ -65,31 +65,31 @@ functions:
     handler: handler.create
     events:
       - http:
-          path: /v1/kitten
+          path: /v1/user
           method: post
   list: #function name
     handler: handler.list
     events:
       - http:
-          path: /v1/kitten
+          path: /v1/user
           method: get
   get: #function name
     handler: handler.get
     events:
       - http:
-          path: /v1/kitten/{id}
+          path: /v1/user/{id}
           method: get
   update: #function name
     handler: handler.update
     events:
       - http:
-          path: /v1/kitten/{id}
+          path: /v1/user/{id}
           method: put
   delete: #function name
     handler: handler.delete
     events:
       - http:
-          path: /v1/kitten/{id}
+          path: /v1/user/{id}
           method: delete
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
