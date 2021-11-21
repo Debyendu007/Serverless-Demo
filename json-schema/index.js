@@ -1,23 +1,18 @@
 const Joi = require('joi');
 
-const CREATE_USER = Joi.object({
+exports.CREATE_USER = Joi.object({
     name: Joi.string()
-        .alphanum()
         .min(3)
         .max(30)
         .required(),
 
-    age: Joi.string()
-        .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+    age: Joi.number(),
 
     address: Joi.string()
-    .alphanum()
     .min(3)
-    .max(30)
+    .max(300)
     .required(),
 
     email: Joi.string()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
 });
-
-module.export = CREATE_USER;

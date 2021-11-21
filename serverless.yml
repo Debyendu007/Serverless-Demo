@@ -26,7 +26,7 @@ provider:
   lambdaHashingVersion: 20201221
   region: us-east-1
   stage: dev
-  profile: serverless
+  profile: serverless_demo
 
 # you can overwrite defaults here
 #  stage: dev

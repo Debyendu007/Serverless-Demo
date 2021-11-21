@@ -1,7 +1,10 @@
 'use strict';
 
 const AWS = require("aws-sdk");
-const SCHEMA = require("./json-schema");
+const SCHEMA = require("./json-schema/index");
+const sls = require(serverless);
+
+sls(app)
 
 module.exports = {
   create: async (event, context) => {
